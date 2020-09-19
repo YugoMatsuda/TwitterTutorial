@@ -33,7 +33,7 @@ class LoginController: UIViewController {
         logoImageView.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor)
         logoImageView.setDimensions(width: 150, height: 150)
         print()
-        print("dev")
+        print("devssssss")
     }
   
 }
