@@ -67,7 +67,7 @@ class LoginController: UIViewController {
     }
     
     @objc func handleLogin(){
-        print("handleLogin")
+        print("")
         
     }
     
