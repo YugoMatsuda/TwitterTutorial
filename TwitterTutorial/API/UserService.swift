@@ -13,7 +13,7 @@ struct UserService{
     static let shared = UserService()
     
     func fetchUser(){
-        
+        print("fetchUser")
     }
 
 }
