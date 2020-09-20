@@ -21,6 +21,9 @@
 		650CC1B824F3E74C00729766 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650CC1B724F3E74C00729766 /* Extensions.swift */; };
 		659498C42515E3AF00652287 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659498C32515E3AF00652287 /* Utilities.swift */; };
 		659498DC251715D900652287 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 659498DB251715D900652287 /* GoogleService-Info.plist */; };
+		6594995E25173B5C00652287 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594995D25173B5C00652287 /* Constants.swift */; };
+		659499612517430700652287 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659499602517430700652287 /* AuthService.swift */; };
+		65949964251785F100652287 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65949963251785F100652287 /* UserService.swift */; };
 		65C90FD82507B90B008EF661 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C90FD72507B90B008EF661 /* LoginController.swift */; };
 		65C90FDA2507B9D4008EF661 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C90FD92507B9D4008EF661 /* RegistrationController.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +47,9 @@
 		650CC1B724F3E74C00729766 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		659498C32515E3AF00652287 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		659498DB251715D900652287 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6594995D25173B5C00652287 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		659499602517430700652287 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		65949963251785F100652287 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		65C90FD72507B90B008EF661 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		65C90FD92507B9D4008EF661 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +149,8 @@
 		650CC1AB24F3DA4F00729766 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				659499602517430700652287 /* AuthService.swift */,
+				65949963251785F100652287 /* UserService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 			children = (
 				650CC1B724F3E74C00729766 /* Extensions.swift */,
 				659498C32515E3AF00652287 /* Utilities.swift */,
+				6594995D25173B5C00652287 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -290,17 +299,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65949964251785F100652287 /* UserService.swift in Sources */,
 				65C90FDA2507B9D4008EF661 /* RegistrationController.swift in Sources */,
 				650CC1B424F3DDE500729766 /* NotificationController.swift in Sources */,
 				659498C42515E3AF00652287 /* Utilities.swift in Sources */,
 				650CC1B624F3DE1500729766 /* ConversationsController.swift in Sources */,
 				650CC19324F3D9E500729766 /* AppDelegate.swift in Sources */,
 				650CC1B824F3E74C00729766 /* Extensions.swift in Sources */,
+				659499612517430700652287 /* AuthService.swift in Sources */,
 				65C90FD82507B90B008EF661 /* LoginController.swift in Sources */,
 				650CC1B224F3DDB300729766 /* ExploreController.swift in Sources */,
 				650CC1B024F3DD6000729766 /* FeedController.swift in Sources */,
 				650CC19524F3D9E500729766 /* SceneDelegate.swift in Sources */,
 				650CC1AE24F3DC2300729766 /* MainTabViewController.swift in Sources */,
+				6594995E25173B5C00652287 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
