@@ -10,7 +10,13 @@ import UIKit
 import Firebase
 class MainTabViewController: UITabBarController {
     
-    
+    var user: User?{
+        didSet{
+            guard let nav = viewControllers?.first as? UINavigationController else { return  }
+            guard let feed = nav.viewControllers.first as? FeedController else { return  }
+            feed.user = user
+        }
+    }
     
     let actionButton :UIButton = {
         let button = UIButton(type: .system)
@@ -29,7 +35,10 @@ class MainTabViewController: UITabBarController {
     }
     
     func fetchUser(){
-        UserService.shared.fetchUser()
+        UserService.shared.fetchUser { (user) in
+            print(user)
+            self.user = user
+        }
     }
     
     
@@ -57,8 +66,11 @@ class MainTabViewController: UITabBarController {
     }
     
     @objc func actionButtonTapped(){
-        print("Tapped")
-    }
+        guard let user = user else { return }
+        let controller = UploadTweetController(user: user)
+        let nav = UINavigationController(rootViewController: controller)
+        nav.modalPresentationStyle = .fullScreen
+        present(nav, animated: true, completion: nil)    }
     
     func configureUI(){
         view.addSubview(actionButton)
