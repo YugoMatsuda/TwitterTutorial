@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-let reuseIdentifier = "TweetCell"
+ let reuseIdentifier = "TweetCell"
 
 class FeedController: UICollectionViewController{
     
@@ -30,6 +30,11 @@ class FeedController: UICollectionViewController{
         configureUI()
         fetchTweet()
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.barStyle = .default
+        navigationController?.navigationBar.isHidden = false
     }
     
     
@@ -76,7 +81,7 @@ extension FeedController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TweetCell
         
-//        cell.delegate = self
+        cell.delegate = self
         cell.tweet = tweets[indexPath.row]
         
         return cell
@@ -95,3 +100,26 @@ extension FeedController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: view.frame.width, height:  100)
     }
 }
+
+extension FeedController: TweetCellDelegate {
+    func handleProfileImageTapped(_ cell: TweetCell) {
+        guard let user  = cell.tweet?.user else{ return }
+        let controller = ProfileController(user: user)
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func handleReplyTapped(_ cell: TweetCell) {
+        
+    }
+    
+    func handleLikeTapped(_ cell: TweetCell) {
+        
+    }
+    
+    func handleFetchUser(withUsername username: String) {
+        
+    }
+    
+
+}
+

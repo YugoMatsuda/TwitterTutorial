@@ -99,11 +99,11 @@ class TweetCell: UICollectionViewCell {
         stack.axis = .vertical
         stack.distribution = .fillProportionally
         stack.spacing = 4
-//        infoLabel.text = "venom bvenom"
+        infoLabel.text = "venom bvenom"
         infoLabel.font = UIFont.systemFont(ofSize: 14)
         
         addSubview(stack)
-        stack.anchor(top:profileImageView.topAnchor,left: profileImageView.rightAnchor,paddingLeft: 12,paddingRight: 12)
+        
 //
 //        let imageCaptionStack = UIStackView(arrangedSubviews: [profileImageView, captionStack])
 //        imageCaptionStack.distribution = .fillProportionally
@@ -135,6 +135,8 @@ class TweetCell: UICollectionViewCell {
         addSubview(underlineView)
         underlineView.anchor(left: leftAnchor, bottom: bottomAnchor,
                              right: rightAnchor, height: 1)
+        
+        stack.anchor(top:profileImageView.topAnchor,left: profileImageView.rightAnchor,bottom: actionStack.topAnchor,right: rightAnchor,paddingLeft: 12,paddingBottom: 10, paddingRight: 12)
 //
 //        configureMentionHandler()
     }

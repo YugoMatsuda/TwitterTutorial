@@ -42,6 +42,7 @@ struct TweetViewModel {
                      .foregroundColor: UIColor.lightGray]))
         return title
     }
+
     init(tweet: Tweet) {
         self.tweet = tweet
         self.user = tweet.user
